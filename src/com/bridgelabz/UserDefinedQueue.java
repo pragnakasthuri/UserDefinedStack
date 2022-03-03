@@ -21,26 +21,52 @@ public class UserDefinedQueue<T> {
     }
 
     /**
+     * this method is to remove the first element in queue using pop method on linked list
+     */
+    public void dequeue() {
+        myLinkedList.pop();
+    }
+
+    /**
      * Driver program to operate on queue
      * @param args
      */
     public static void main(String[] args) {
         /**
-         * creating an object for userdefined queue
+         * PROCEDURE
+         * 1.creating an object for user defined queue
+         * 2.adding 3 elements to queue
+         * 3.printing the queue using display method
+         * 4.operating dequeue on the user defined queue
+         * 5.display the elements in queue
          */
-        UserDefinedQueue<Integer> myStack = new UserDefinedQueue<>();
+        
+        /**
+         * 1.creating an object for user defined queue
+         */
+        UserDefinedQueue<Integer> myQueue = new UserDefinedQueue<>();
 
         /**
-         * adding 3 elements to queue
+         * 2.adding 3 elements to queue
          */
-        myStack.enqueue(new Node<Integer>(56));
-        myStack.enqueue(new Node<Integer>(30));
-        myStack.enqueue(new Node<Integer>(70));
+        myQueue.enqueue(new Node<Integer>(56));
+        myQueue.enqueue(new Node<Integer>(30));
+        myQueue.enqueue(new Node<Integer>(70));
 
         /**
-         * printing the queue using display method
+         * 3.printing the queue using display method
          */
-        myStack.myLinkedList.display();
+        myQueue.myLinkedList.display();
+
+        /**
+         * 4.operating dequeue on the user defined queue
+         */
+        myQueue.dequeue();
+
+        /**
+         * 5.display the elements in queue
+         */
+        myQueue.myLinkedList.display();
 
     }
 }
